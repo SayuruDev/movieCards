@@ -1,31 +1,14 @@
 import './App.css'
-
+import MovieCard from "./components/MovieCard"
 function App() {
-
+  const movieNumber = 1;
   return (
     <>
-      < Text/>
-      < Text/>
-      < Something display="Sayuru"/>
+    {movieNumber === 1 ?
+    (< MovieCard movie={{title: "Sayuru's film", release_date: "2025"}}/>) :
+    (< MovieCard movie={{title: "Sagara's film", release_date: "2023"}}/>)
+    }
     </> 
-    
-  )
-}
-
-function Text(){
-  return (
-    <div>
-      <p>hello world!</p>
-    </div>
   );
 }
-
-function Something({display}){
-  return (
-    <div>
-      <p>{display}</p>
-    </div>
-  );
-}
-
 export default App
